@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/plainBlogApp/static/css/main.d4edc9f2.chunk.css",
+    "main.js": "/plainBlogApp/static/js/main.4eeb5faf.chunk.js",
+    "main.js.map": "/plainBlogApp/static/js/main.4eeb5faf.chunk.js.map",
+    "runtime-main.js": "/plainBlogApp/static/js/runtime-main.72664680.js",
+    "runtime-main.js.map": "/plainBlogApp/static/js/runtime-main.72664680.js.map",
+    "static/js/2.9177657f.chunk.js": "/plainBlogApp/static/js/2.9177657f.chunk.js",
+    "static/js/2.9177657f.chunk.js.map": "/plainBlogApp/static/js/2.9177657f.chunk.js.map",
+    "index.html": "/plainBlogApp/index.html",
+    "precache-manifest.a17cdfcdb9299ea3ecf6960d47e195bc.js": "/plainBlogApp/precache-manifest.a17cdfcdb9299ea3ecf6960d47e195bc.js",
+    "service-worker.js": "/plainBlogApp/service-worker.js",
+    "static/css/main.d4edc9f2.chunk.css.map": "/plainBlogApp/static/css/main.d4edc9f2.chunk.css.map",
+    "static/js/2.9177657f.chunk.js.LICENSE.txt": "/plainBlogApp/static/js/2.9177657f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.72664680.js",
+    "static/js/2.9177657f.chunk.js",
+    "static/css/main.d4edc9f2.chunk.css",
+    "static/js/main.4eeb5faf.chunk.js"
+  ]
+}
