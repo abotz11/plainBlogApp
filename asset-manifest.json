@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/plainBlogApp/static/css/main.3b33c7f4.chunk.css",
-    "main.js": "/plainBlogApp/static/js/main.13e87b7e.chunk.js",
-    "main.js.map": "/plainBlogApp/static/js/main.13e87b7e.chunk.js.map",
+    "main.js": "/plainBlogApp/static/js/main.aac193f5.chunk.js",
+    "main.js.map": "/plainBlogApp/static/js/main.aac193f5.chunk.js.map",
     "runtime-main.js": "/plainBlogApp/static/js/runtime-main.72664680.js",
     "runtime-main.js.map": "/plainBlogApp/static/js/runtime-main.72664680.js.map",
     "static/js/2.1a6f8415.chunk.js": "/plainBlogApp/static/js/2.1a6f8415.chunk.js",
     "static/js/2.1a6f8415.chunk.js.map": "/plainBlogApp/static/js/2.1a6f8415.chunk.js.map",
     "index.html": "/plainBlogApp/index.html",
-    "precache-manifest.d8fdc13ff05e895e1a0a8c5a50598303.js": "/plainBlogApp/precache-manifest.d8fdc13ff05e895e1a0a8c5a50598303.js",
+    "precache-manifest.b633982e3dec416f2a8d6caf18fb333b.js": "/plainBlogApp/precache-manifest.b633982e3dec416f2a8d6caf18fb333b.js",
     "service-worker.js": "/plainBlogApp/service-worker.js",
     "static/css/main.3b33c7f4.chunk.css.map": "/plainBlogApp/static/css/main.3b33c7f4.chunk.css.map",
     "static/js/2.1a6f8415.chunk.js.LICENSE.txt": "/plainBlogApp/static/js/2.1a6f8415.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.72664680.js",
     "static/js/2.1a6f8415.chunk.js",
     "static/css/main.3b33c7f4.chunk.css",
-    "static/js/main.13e87b7e.chunk.js"
+    "static/js/main.aac193f5.chunk.js"
   ]
 }
