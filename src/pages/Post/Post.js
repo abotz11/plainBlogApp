@@ -1,7 +1,5 @@
 import React from 'react';
 import {useParams} from  'react-router-dom'
-import "./Post.css"
-
 
 const findPost = (posts, postId) =>{
   var foundPost = null;

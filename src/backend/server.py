@@ -6,10 +6,11 @@ import uuid
 import bcrypt
 
 db = mysql.connect(
-	host = "localhost",
-	user = "root",
-	passwd = "dbpwd",
-	database = "world")
+	host = "my-rds.cdvhbhtikmiv.us-east-1.rds.amazonaws.com",
+	port = 3306,
+	user = "admin",
+	passwd = "admin1111",
+	database = "my_rds_DB")
 
 print(db)
 
@@ -57,7 +58,7 @@ def get_post(id):
 	return json.dumps(dict(zip(header, record)), default=str)
 
 def get_all_posts():
-	user = check_login()
+	# user = check_login()
 	query = "select users.user_name, users.authorization, users.img_src, posts.id, title, content, last_update from posts join users on posts.user_id = users.id order by last_update desc"
 	cursor = db.cursor()
 	cursor.execute(query)
@@ -90,10 +91,11 @@ def login():
 	if not record:
 		abort(401)
 	user_id = record[0]
-	hashed_pwd = bcrypt.hashpw(record[1].encode('utf-8'), bcrypt.gensalt())
+	hashed_pwd = record[1].encode('utf-8')
 
 	if bcrypt.hashpw(data['pass'].encode('utf-8'), hashed_pwd) != hashed_pwd:
 		abort(401)
+
 
 	session_id = str(uuid.uuid4())
 	query = "insert into sessions (user_id, session_id) values (%s, %s) on duplicate key update session_id=%s"
@@ -128,7 +130,7 @@ def get_user(user_id):
 	cursor.execute(query, values)
 	record = cursor.fetchone()
 	cursor.close()
-	print("--------------->record: ", record)
+	print(record)
 	header = ['full_name', 'user_name']
 	return json.dumps(dict(zip(header, record)), default=str)
 
@@ -137,7 +139,9 @@ def signin():
 	data = request.get_json()
 	print(data)
 	query = "insert into users (full_name, user_name, password) values (%s, %s, %s)"
-	values = (data['name'], data['user'], data['pass'])
+
+	hashed_pwd = bcrypt.hashpw(data['pass'].encode('utf-8'), bcrypt.gensalt())
+	values = (data['name'], data['user'], hashed_pwd)
 	
 	cursor = db.cursor()
 	cursor.execute(query, values)
@@ -166,6 +170,3 @@ def logout():
 	resp = make_response()
 	resp.set_cookie("session_id", '', expires=0)
 	return resp
-
-if __name__ == "__main__":
-	app.run()

@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route} from  'react-router-dom'
 import axios from 'axios';
-import './App.css';
 
 import Toolbar from "./components/Toolbar/Toolbar";
 import Blog from "./components/Blog/Blog";

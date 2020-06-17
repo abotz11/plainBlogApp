@@ -1,7 +1,5 @@
 import React from 'react';
 import BlogPosts from "../BlogPosts/BlogPosts";
-import "./Mainbar.css";
-
 
 function Mainbar(props) {
   return (
