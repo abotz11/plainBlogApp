@@ -14,8 +14,18 @@ db = mysql.connect(
 
 print(db)
 
-app = Flask(__name__)
+app = Flask(__name__,
+			static_folder='../frontend/build', 
+			static_url_path='/')
 
+@app.route('/') 
+def index(): 
+	return app.send_static_file('index.html')
+
+@app.route('/api/alive') 
+def api_alive(): 
+	return "alive"
+	
 @app.route('/posts', methods=['GET', 'POST'])
 def manage_posts():
 	if request.method == 'GET':
@@ -58,7 +68,7 @@ def get_post(id):
 	return json.dumps(dict(zip(header, record)), default=str)
 
 def get_all_posts():
-	# user = check_login()
+	user = check_login()
 	query = "select users.user_name, users.authorization, users.img_src, posts.id, title, content, last_update from posts join users on posts.user_id = users.id order by last_update desc"
 	cursor = db.cursor()
 	cursor.execute(query)
