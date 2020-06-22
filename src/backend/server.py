@@ -9,7 +9,7 @@ db = mysql.connect(
 	host = "my-rds.cdvhbhtikmiv.us-east-1.rds.amazonaws.com",
 	port = 3306,
 	user = "admin",
-	passwd = "admin1111",
+	password = "admin1111",
 	database = "my_rds_DB")
 
 print(db)
